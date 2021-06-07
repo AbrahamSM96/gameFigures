@@ -1,0 +1,41 @@
+._content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: coral;
+    height: 100vh;
+}
+
+._question {
+    display: flex;
+    height: 40vh;
+}
+._stimulus {
+    height: 20vh;
+}
+._content_figure {
+    height: auto;
+    width: auto;
+    cursor: pointer;
+}
+
+._figure {
+    height: 100px;
+    width: 100px;
+    margin: 0;
+}
+
+._answer {
+    display: grid;
+    justify-items: center;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(13rem, auto));
+    grid-auto-flow: column;
+    height: 40vh;
+    width: 100%;
+}
+
+._answer div {
+    width: 80px;
+}

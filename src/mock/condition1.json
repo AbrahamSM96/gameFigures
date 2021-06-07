@@ -1,0 +1,79 @@
+{
+    "results": [
+        {
+            "instructions": "En la pantalla del monitor aparecerán cuatro figuras geométricas, una en la parte superior y tres más en la parte inferior. De las figuras que aparecen en la parte inferior de la pantalla del monitor deberás elegir la que sea DIFERENTE a la que aparece en la parte superior colocando el cursor sobre ella y dando clic con el botón izquierdo del mouse",
+            "question": [
+                {
+                    "id": 1,
+                    "name": "circle",
+                    "image": "https://img.icons8.com/ios/452/circled.png"
+                },
+                {
+                    "id": 2,
+                    "name": "triangle",
+                    "image": "http://pngimg.com/uploads/triangle/triangle_PNG95.png"
+                }
+            ],
+            "correct_answer": [
+                {
+                    "id": 1,
+                    "name": "pentagon",
+                    "image": "https://images.vexels.com/media/users/3/139249/isolated/preview/c157211586534bdb8afe7caeb407ba15-forma-de-pent-aacute-gono-by-vexels.png",
+                    "checked": 1,
+                    "identica": null,
+                    "semejanteEnForma": null,
+                    "semejanteEnColor": null,
+                    "diferente": null,
+                    "correct": true
+                }
+            ],
+            "incorrect_answers": [
+                {
+                    "id": 2,
+                    "name": "triangle",
+                    "image": "http://pngimg.com/uploads/triangle/triangle_PNG95.png",
+                    "checked": 2,
+                    "identica": null,
+                    "semejanteEnForma": null,
+                    "semejanteEnColor": null,
+                    "diferente": null,
+                    "correct": false
+                },
+                {
+                    "id": 3,
+                    "name": "square",
+                    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Cuadrado.svg/1024px-Cuadrado.svg.png",
+                    "checked": 3,
+                    "identica": null,
+                    "semejanteEnForma": null,
+                    "semejanteEnColor": null,
+                    "diferente": null,
+                    "correct": false
+                },
+                {
+                    "id": 4,
+                    "name": "circle",
+                    "image": "https://img.icons8.com/ios/452/circled.png",
+                    "checked": 4,
+                    "identica": null,
+                    "semejanteEnForma": null,
+                    "semejanteEnColor": null,
+                    "diferente": null,
+                    "correct": false
+                },
+
+                {
+                    "id": 5,
+                    "name": "parallelogram",
+                    "image": "https://images.vexels.com/media/users/3/139246/isolated/preview/3f73ca4f80dbed9b284a7315efa28e5d-trazo-de-forma-de-paralelogramo-by-vexels.png",
+                    "checked": 5,
+                    "identica": null,
+                    "semejanteEnForma": null,
+                    "semejanteEnColor": null,
+                    "diferente": null,
+                    "correct": false
+                }
+            ]
+        }
+    ]
+}
