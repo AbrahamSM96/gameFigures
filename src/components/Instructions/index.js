@@ -3,6 +3,7 @@ import GameComponent from '../GameComponent';
 import Response from '../Response'
 import styles from './Instructions.module.css'
 import data from "../../mock/condition1.json";
+import { useAppContext } from "../../context/state";
 
 export default function Instructions() {
     const [instruction, setInstruction] = useState(false)
@@ -10,33 +11,39 @@ export default function Instructions() {
     const [currentIndex, setCurrentIndex] = useState(0)
     const [score, setScore] = useState(0)
     const [gameEnded, setGameEnded] = useState(false)
-    const [response, setResponse] = useState(false)
-    const { results=[] } = data;
-    useEffect(() => {
-        setCurrentQuestion(results)
+    const [response, setResponse] = useState(null)
+     const result = useAppContext();
 
-    },[])
+    const { results={} } = data;
+    useEffect(() => {
+        setCurrentQuestion(result);                     
+         if(response !== null){
+             console.log(response, 'response')
+           const timer =  setTimeout(()=>{
+            setResponse(null)
+        },2000)
+        return () => clearTimeout(timer);
+    }
+    },[response])
 
        const handleAnswer = (answer) => {
-           const newIndex = currentIndex + 1
-           console.log(currentQuestion[currentIndex].correct_answer[0], "anw");
-           console.log(answer, "answer");
-           setCurrentIndex(newIndex);
+          // const newIndex = currentIndex + 1
+          // setCurrentIndex(newIndex);
            if(answer === currentQuestion[currentIndex].correct_answer[0]){
             setScore(score + 1);
             setResponse(true)
+           }else{
+               setResponse(false)
            }
-           if(newIndex >= currentQuestion.length){
-               setGameEnded(true)
-           }
+        //    if(newIndex >= currentQuestion.length){
+        //        setGameEnded(true)
+        //    }
        };
       const onClick = () => {
           setInstruction(true);
       };
-      console.log(
-          currentQuestion[currentIndex],
-          "currentQuestion[currentIndex]",
-      );
+
+
       
     return (
         <>

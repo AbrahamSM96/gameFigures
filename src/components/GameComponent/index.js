@@ -4,9 +4,10 @@ import Square from '../../svg/Square'
 import Circle from "../../svg/Circle";
 import Response from "../Response";
 import Triangle from "../../svg/Triangle";
-export default function GameComponent({ data = {}, handleAnswer,response }) {
-    const { correct_answer=[], incorrect_answers=[] } = data;
-    console.log(data)
+import { useAppContext } from "../../context/state";
+
+export default function GameComponent({ data, handleAnswer, response }) {
+    const { correct_answer = [], incorrect_answers = [] } = data;
     function onlyCheckBox(e) {
         const myCheckbox = document.getElementsByName("figure");
         Array.prototype.forEach.call(myCheckbox, function (element) {
@@ -20,14 +21,12 @@ export default function GameComponent({ data = {}, handleAnswer,response }) {
     const shuffledAnswers = [correct_answer[0], ...incorrect_answers].sort(
         () => Math.random() - 0.5,
     );
-    console.log(correct_answer, "shuffledAnswers");
     return (
         <>
-            {response ? (
-                <Response response={response} />
-            ) : (
-                <Response response={response} />
-            )}
+        {
+            response !== null ? <Response response={response}/> :
+        
+          
             <div className={styles._content}>
                 <div className={styles._question}>
                     <div>
@@ -108,6 +107,7 @@ export default function GameComponent({ data = {}, handleAnswer,response }) {
                     ))}
                 </div>
             </div>
+}
         </>
     );
 }
