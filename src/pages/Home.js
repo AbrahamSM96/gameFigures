@@ -9,12 +9,17 @@ export default function Home() {
     }
 
     return (
-        <div className={styles._content}>
-            <div className={styles._content_title}>
-                <h1 className={(styles._h1, "text-purple-800")}>Title</h1>
+        <div className="flex flex-col justify-center items-center h-screen ">
+            <div className="justify-center my-12">
+                <h1 className="text-purple-800 text-5xl">
+                    Título de la aplicación
+                </h1>
             </div>
-            <div className={styles._content_button}>
-                <button className={styles._button} onClick={onClick}>
+            <div className="justify-center">
+                <button
+                    className="bg-purple-200 rounded-2xl p-4"
+                    onClick={onClick}
+                >
                     Iniciar
                 </button>
             </div>

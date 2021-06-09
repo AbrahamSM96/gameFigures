@@ -48,11 +48,11 @@ export default function Instructions() {
     return (
         <>
             {instruction ? (
-                    <GameComponent
-                        data={currentQuestion[currentIndex]}
-                        handleAnswer={handleAnswer}
-                        response={response}
-                    />
+                <GameComponent
+                    data={currentQuestion[currentIndex]}
+                    handleAnswer={handleAnswer}
+                    response={response}
+                />
             ) : (
                 <div className={styles._content}>
                     <div className={styles._text}>
@@ -62,7 +62,12 @@ export default function Instructions() {
                         <p>{results[0].instructions}</p>
                     </div>
                     <div>
-                        <button onClick={onClick}>Siguiente</button>
+                        <button
+                            className="bg-purple-200 rounded-2xl p-4"
+                            onClick={onClick}
+                        >
+                            Siguiente
+                        </button>
                     </div>
                 </div>
             )}
